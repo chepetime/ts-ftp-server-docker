@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  ftp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "21:21"
+      - "30000-30009:30000-30009"
+    environment:
+      VERSION: "docker"
+      FTP_HOSTNAME: "0.0.0.0"
+      FTP_PORT: 21
+      PASV_PORT_START: 30000
+      PASV_PORT_END: 30009
+      FTP_ROOT_DIR: /tmp/ftp
+      FTP_USERNAME: "ray-thoraces-thulium"
+      FTP_PASSWORD: "]Ei?#k9g5?H=2jcXrp)="
+      WHITELIST: ""
+      BLACKLIST: ""
+    volumes:
+      - ftp-data:/ftp
+
+volumes:
+  ftp-data:
+    driver: local
