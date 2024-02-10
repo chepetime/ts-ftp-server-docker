@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
+    "docker:up": "pnpm run build && docker-compose down && docker-compose up --build --remove-orphans --force-recreate",
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "nodemon"

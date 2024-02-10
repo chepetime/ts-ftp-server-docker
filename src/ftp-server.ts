@@ -16,7 +16,6 @@ import {
 const ftpServer = new FtpSrv({
   url: `ftp://${HOSTNAME}:${PORT}`,
   anonymous: false,
-
   pasv_url: PASV_URL,
   pasv_min: PASV_PORT_START,
   pasv_max: PASV_PORT_END,
