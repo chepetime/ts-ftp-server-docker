@@ -1,0 +1,26 @@
+# Workflow for installing, building a testing a turborepo project
+
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: ["ubuntu-latest"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Build Component Library
+        run: pnpm build

@@ -1,5 +1,5 @@
 import chokidar from "chokidar";
-import { promises as fs, createWriteStream } from "fs";
+import { promises as fs } from "fs";
 import { FTP_ROOT_DIR } from "./constants";
 import * as path from "path";
 import * as XLSX from "xlsx";

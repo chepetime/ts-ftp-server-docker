@@ -1,27 +1,31 @@
 {
-  "name": "yogi-final-ftp",
+  "name": "ts-ftp-server-docker",
   "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
   "main": "dist/index.js",
   "scripts": {
-    "docker:up": "pnpm run build && docker-compose down && docker-compose up --build --remove-orphans --force-recreate",
     "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "docker:up": "pnpm run build && docker-compose down && docker-compose up --build --remove-orphans --force-recreate",
+    "lint": "eslint .",
+    "start": "node dist/index.js"
   },
-  "author": "",
-  "license": "ISC",
-  "keywords": [],
-  "description": "",
   "dependencies": {
     "chokidar": "^3.6.0",
     "ftp-srv": "^4.6.3",
-    "typescript": "^5.3.3",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/chokidar": "^2.1.3",
     "@types/node": "^20.11.17",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
     "nodemon": "^3.0.3",
-    "ts-node": "^10.9.2"
-  }
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "keywords": []
 }
