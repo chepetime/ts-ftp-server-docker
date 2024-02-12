@@ -1,4 +1,6 @@
-# FTP Server over Docker
+# Node/Typescript FTP Server Over Docker
+
+Simple ftp server using node and docker
 
 ## Prerequisites
 
