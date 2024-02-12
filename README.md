@@ -1,5 +1,7 @@
 # Node/Typescript FTP Server Over Docker
 
+[![CI](https://github.com/chepetime/ts-ftp-server-docker/actions/workflows/ci.yml/badge.svg)](https://github.com/chepetime/ts-ftp-server-docker/actions/workflows/ci.yml)
+
 Simple ftp server using node and docker
 
 ## Prerequisites
