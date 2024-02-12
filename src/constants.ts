@@ -6,8 +6,8 @@ export const PASV_PORT_END = 30009;
 export const PASV_URL = process.env.FTP_PASV_URL;
 
 export const FTP_ROOT_DIR = process.env.FTP_ROOT_DIR || "/ftp";
-export const FTP_USERNAME = process.env.FTP_USERNAME || "ray-thoraces-thulium";
-export const FTP_PASSWORD = process.env.FTP_PASSWORD || "]Ei?#k9g5?H=2jcXrp)=";
+export const FTP_USERNAME = process.env.FTP_USERNAME;
+export const FTP_PASSWORD = process.env.FTP_PASSWORD;
 
 // IP Filtering setup
 export const WHITELIST = process.env.IP_WHITELIST
